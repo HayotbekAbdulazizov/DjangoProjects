@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+
+{% for quote in quotes %}
+<div class="conatainer" style="display:flex; justify-content: center;align-items: center; box-sizing: border-box; padding: 15px 15px 15px 15px ;">
+  <div class="imgouter">
+    <img src="{{quote.author_image.url}}" >
+  </div>
+  <div class="text">
+    <p style="padding:10px 60px 10px 60px; font-weight: bold; color:  wheat; font-size: 25px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">{{quote.body}}</p>
+  </div>
+</div>
+<h6 style="font-size: 20px;color: wheat;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> -- {{quote.author}} </h6>
+
+{% endfor %}
+    
+<style>
+  h6{
+    transform: translate(920px, -160px);
+  }
+  body{
+background-color: rgb(95, 96, 99);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  img{
+    width: 300px;
+    height: 300px;
+    border-radius: 45%;
+    margin-left: 50px;
+  }
+  .conatainer{
+    margin-left: 200px;
+    margin-top: 100px;
+    width:1000px;
+    height: 500px;
+    background-color:rgba(228,226,227,0.5);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgb(104, 101, 101);
+  }
+</style>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

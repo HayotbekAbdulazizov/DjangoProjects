@@ -1,0 +1,14 @@
+
+{% if searched_movies %}
+<ul>
+    
+    {% for movie in searched_movies %}
+        <a href="{% url 'main:movie_detail' movie.id %}">
+            {{movie.title}}
+        </a>
+    {% endfor %}
+        
+</ul>
+    
+{% endif %}
+    

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="mt-4">
+<center><h1><b>Buy New Beststellers <br>for your self Study</b></h1></center>
+</div>
+
+<div class="container mt-5">
+	<div class="row">
+
+{% for category in categories %}
+		{% for i in category.books.all %}
+		<div class="col-md-3 mb-5">
+			<div class="shadow card">
+			  <img src="{{i.image.url}}" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title"><b>{{i.title}} </b></h5>
+			    <p class="card-text">{{i.body}}</p>
+			    <a href="{% url 'main:detail_page' i.id %}" class="btn btn-success">BUY & READ THIS</a>
+			  </div>
+			</div>
+		</div>
+	{% endfor %}
+{% endfor %}
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,87 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/static/assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.css">
+    <title>Delete Car | {{object.model}}</title>
+</head>
+<body>
+    
+<h1 class="text-center mt-5"> Are You Sure You Want To Delete | {{object.model}} </h1>
+
+
+<h2 class="text-center mt-5  text-danger"> {{object.brand}}  {{object.model}} </h2>
+
+<div class="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <img src="{{car.image_main.url}}" alt="" class="img-fluid wc-image">
+        </div>
+        <br>
+      </div>
+
+      <div class="col-md-6">
+          <ul class="list-group list-group-flush">
+
+           <li class="list-group-item">
+                <div class="clearfix">
+                     <span class="font-weight-bold pull-left">Type </span>
+                     <strong class="pull-right">{{car.status.upper}} vehicle</strong>
+                </div>
+           </li>
+
+           <li class="list-group-item">
+                <div class="clearfix">
+                     <span class="font-weight-bold pull-left">First registration</span>
+                     <strong class="pull-right">05/2010</strong>
+                </div>
+           </li>
+
+
+
+
+           <li class="list-group-item">
+                <div class="clearfix">
+                     <span class="font-weight-bold pull-left">Power</span>
+                     <strong class="pull-right">{{car.power}} HP</strong>
+                </div>
+           </li>
+
+           <li class="list-group-item">
+            <div class="clearfix">
+                 <span class=" font-weight-bold pull-left">Price </span>
+                 <strong class="pull-right">{{object.price}} $ </strong>
+            </div>
+       </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<form class="text-center" action="" method="post">
+  {% csrf_token %}
+   <button  style=" width: 200px;height: 70px;padding: 20px;padding-left: 60px;font-size: 20px;" type="submit" class="text-center btn btn-group btn-danger font-weight-bold"> Delete </button>
+</form>
+
+
+
+
+
+
+      <script src="/static/vendor/jquery/jquery.min.js"></script>
+      <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="/static/assets/js/custom.js"></script>
+      <script src="/static/assets/js/owl.js"></script>
+</body>
+</html>

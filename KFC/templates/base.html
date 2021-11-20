@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/assets/css/fontawesome.css">
+        <link rel="stylesheet" href="">
+        <title> KFC || Tashkent </title>
+    <!-- Clear form -->
+    <script>
+            if ( window.history.replaceState ) {
+             window.history.replaceState( null, null, window.location.href );
+            }
+    </script>
+    </head>
+    <body >
+
+        <nav>
+            <div class="w-100 text-center mt-4 " s >
+                <img src="/static/kfc-logo.jpg " style="width: 105px;height: 105px;" alt="" class="rounded-circle">
+                <span > <i class="fas fa-shopping-bag fa-2x"></i> </span>
+            </div>
+            <div class="w-100 text-center mt-5" >
+                <ul class="d-flex justify-content-center mt-5">
+                {% for category in categories %}
+                {% if category.foods.all|length != 0 %}
+                <a href="#category_{{category.name}}" class="list-item text-danger font-weight-bold ml-5"> {{category.name.upper}} </a>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            </div>
+        </nav>
+
+{% block content %}
+
+
+
+
+{% endblock %}
+
+<script src="{% static 'assets/js/custom.js' %}"></script>
+         </body>
+     </html>
+     

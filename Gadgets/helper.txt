@@ -1,0 +1,134 @@
+STATIC ROOT
+
+import os
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_DIRS = (
+  os.path.join(BASE_DIR, 'staticfiles')) ,
+
+
+
+
+
+  URLS
+imports
+
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('main.urls', namespace='main')),
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL,  document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
+
+
+APP URLS
+
+from django.urls import path
+from .import views
+
+app_name = 'main'
+
+urlpatterns = [
+	path('',views.homePage, name='home'),
+	path('about/',views.aboutPage, name='about'),
+	path('contact/',views.contactPage, name='contact'),
+	path('blog/',views.blogPage, name='blog'),
+	path('<slug:post_slug>/',views.postDetailPage, name='post_detail'),
+	path('tag/<slug:tag_slug>/',views.tagDetailPage, name='tag_detail'),
+	path('search/', views.searchResult, name='search')
+]
+
+
+
+
+
+APP views
+
+from django.shortcuts import render, get_object_or_404
+from django.urls.conf import path
+from .models import *
+from django.http import HttpResponse
+
+from django.contrib import messages
+from .forms import *
+
+
+def homePage(request):
+	posts = Post.objects.all().order_by('-id')
+
+	# for post in posts:
+	# 	print(post.title)
+
+	# get, create, filter, save, delete, order_by
+
+	context = {
+		'posts':posts
+	}
+	# messages.add_message(request, messages.INFO, "Xush kelibsiz")
+	return render(request, 'index.html', context)
+
+
+
+
+
+
+
+
+
+APP admin
+
+from django.contrib import admin
+from .models import *
+
+# Register your models here.
+
+
+admin.site.register(Contact)
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+	list_display = ['name', 'id']
+	list_display_links = ['name']
+
+@admin.register(Tags)
+class TagAdmin(admin.ModelAdmin):
+	list_display = ['name', 'id']
+	list_display_links = ['name']
+	prepopulated_fields = {'slug':('name',)}
+
+
+
+
+
+
+
+
+
+
+APP models
+
+class Comment(models.Model):
+	post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+	name = models.CharField("Ismingiz", max_length=50)
+	email = models.EmailField("Email", max_length=250)
+	subject = models.CharField("Mavzu", max_length=100)
+	message = models.TextField("Xabar matni",)
+
+	def __str__(self):
+		return f"{self.name}"
+
+	class Meta:
+		verbose_name='Muhokama'
+		verbose_name_plural='Muhokamalar'

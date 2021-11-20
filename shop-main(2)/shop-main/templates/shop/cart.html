@@ -1,0 +1,106 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+      <!-- adminx-content-aside -->
+      <div class="adminx-content">
+        <!-- <div class="adminx-aside">
+
+        </div> -->
+
+        <div class="adminx-main-content">
+          <div class="container-fluid">
+            <!-- BreadCrumb -->
+            <nav aria-label="breadcrumb" role="navigation">
+              <ol class="breadcrumb adminx-page-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Bosh sahifa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Savatcha</li>
+              </ol>
+            </nav>
+
+            <div class="pb-3">
+              <h1>Savatcha </h1>
+            </div>
+
+             <div class="row">
+              <div class="col">
+                <div class="card mb-grid">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="card-header-title">Tovarlar</div>
+                  </div>
+                  <div class="table-responsive-md">
+                    <table class="table table-actions table-striped table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-all">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                          <th scope="col">Tovar rasmi</th>
+                          <th scope="col">Tovar nomi</th>
+                          <th scope="col">Narxi</th>
+                          <th scope="col">Soni</th>
+                          <th scope="col">Umumiy narxi</th>
+                            <th scope="col">O'zgartirish</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for product in cart.products.all %}
+                          {% with product as item %}
+                            <tr>
+                          <th scope="row">
+                            <label class="custom-control custom-checkbox m-0 p-0">
+                              <input type="checkbox" class="custom-control-input table-select-row">
+                              <span class="custom-control-indicator"></span>
+                            </label>
+                          </th>
+                          <td>
+                              <img src="{{ item.product.image.url }}" width="50" alt="">
+                          </td>
+                          <td><strong>{{ item.product.name }}</strong></td>
+                          <td>$ <strong>{{ item.product.price}}</strong></td>
+                          <td>{{item.quantity}}</td>
+                          <td>
+                            <span>$ <strong>{{ item.price }}</strong></span>
+                          </td>
+                          <td>
+                            <button class="btn btn-sm btn-primary">Edit</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                          </td>
+                        </tr>
+                          {% endwith %}
+                      {% endfor %}
+
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container">
+                    <div class="card p-5">
+                        <div class="mt-2">
+                            <h4>Barcha tovarlar :  <strong>{{ cart.total_quantity }}</strong> ta</h4>
+                        </div>
+                        <div class="mt-2">
+                            <h4>Umumiy summa : $ <strong>{{ cart.total_price }}</strong></h4>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-danger">
+                        <h2>Cart total card</h2>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

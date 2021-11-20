@@ -1,0 +1,46 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+      <!-- adminx-content-aside -->
+      <div class="adminx-content">
+        <!-- <div class="adminx-aside">
+
+        </div> -->
+
+        <div class="adminx-main-content">
+          <div class="container-fluid">
+            <!-- BreadCrumb -->
+            <nav aria-label="breadcrumb" role="navigation">
+              <ol class="breadcrumb adminx-page-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Bosh sahifa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tovar</li>
+              </ol>
+            </nav>
+
+            <div class="pb-3">
+              <h1>{{ object.name }}</h1>
+            </div>
+
+
+            <div class="row">
+              {% for obj in object.products.all %}
+             <div class="col-sm-3">
+              {% with obj as product %}
+                <div class="card card-product">
+                    <img src="{{product.image.url}}"  alt="" class="card-img-top">
+                    <h3 class="card-title">{{product.name}}</h3>
+                    <p class="card-text">{{product.description|truncatewords:'10'}}</p>
+                    <a href="{% url 'shop:detail' product.id %}" class="btn btn-primary">View</a>
+                  </div>
+              {% endwith %}
+             </div>
+              {% endfor %}
+  
+            </div>
+              </div>
+               
+            </div>
+          </div>
+  
+
+{% endblock %}

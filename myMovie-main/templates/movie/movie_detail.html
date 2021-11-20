@@ -1,0 +1,56 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block content %}
+    <br><br>
+    <div class="container">
+        <div class="row">
+               <div class="col s12 m3 l3">
+                    <div class="card-panel z-depth-3">
+                        <div class="header">
+                        <h5>Rubrics</h5>
+                        </div>
+                       <div class="collection">
+                           {% for rubric in rubrics  %}
+                               <a href="#" class="collection-item">
+                                  <b>{{ rubric.name|upper }}</b>
+                               </a>
+                           {% endfor %}
+                       </div>
+                    </div>
+
+              </div>
+            <div class="card col s12 m9 l9">
+                <br>
+                <div class="row">
+                    <div class="col s6 m6">
+                        <img src="{{ object.poster.url }}" class="responsive-img">
+                    </div>
+                    <div class="col s6 m6">
+                        <ul class="collection with-header">
+                            <li class="collection-header"><h5>Film information</h5></li>
+                            <li class="collection-item">Title:  <b>{{ object.title }}</b></li>
+                            <li class="collection-item">Rubric: <b>{{ object.rubric }}</b></li>
+                            <li class="collection-item">Director: <b>{{ object.director }}</b></li>
+                            <li class="collection-item">Year: <b>{{ object.year }}</b></li>
+                            <li class="collection-item">Country: <b>{{ object.country}}</b></li>
+                            <li class="collection-item">Duration: <b>{{ object.duration}}</b></li>
+                            <li class="collection-item">
+                                  <a href="">
+                                   <span class="new badge blue"
+                                         data-badge-caption="dislike">
+                                      {{ object.dislike }} </span>
+                                </a>
+                                    <a href="{% url 'movie:like' object.id %}">
+                                     <span class="new badge orange"
+                                           data-badge-caption="like">
+                                         {{ object.like }}</span>
+                                </a>
+
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

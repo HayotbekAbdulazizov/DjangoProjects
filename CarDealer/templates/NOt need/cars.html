@@ -1,0 +1,315 @@
+
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(/static/assets/images/heading-6-1920x500.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>Lorem ipsum dolor sit amet</h4>
+              <h2>Cars</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+             <div class="contact-form">
+                <form action="#">
+
+                     <label>Used/New:</label>
+                     <select class="form-control" name="used_new">
+                          <option value="">All</option>
+                          <option value="new">New vehicle</option>
+                          <option value="used">Used vehicle</option>
+                     </select>
+
+
+                     <label>Company:</label>
+                     <select class="form-control" name="company">
+                          <option value="">All</option>
+                          {% for brand in brands %}
+                          <option value="{{brand.name}}"> {{brand.name}} </option>
+                          {% endfor %}
+                     </select>
+
+
+                     <label>Vehicle Type:</label>                    
+                     <select class="form-control" name="category">
+                          <option value="">--All --</option>
+                          <option value="">--All --</option>
+                          <option value="">--All --</option>
+                          <option value="">--All --</option>
+                          <option value="">--All --</option>
+                     </select>
+
+
+
+                     <label>Colors:</label>                    
+                     <select class="form-control" name="colors">
+                       {% for color in colors %}
+                        <option value=""> {{color}}  </option>
+                       {% endfor %}
+                     </select>
+
+
+                     <label>Price:</label>                     
+                     <select class="form-control">
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                     </select>
+
+                     <label>Mileage:</label>  
+                     <select class="form-control">
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                     </select>
+
+
+                     <label>Fuel:</label>
+                     <select class="form-control" name="fuel">
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                     </select>
+
+
+
+                     <label>Doors:</label>
+                     <select class="form-control">
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                     </select>
+
+                     <label>Number of seats:</label>
+                     <select class="form-control">
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                          <option value="">-- All --</option>
+                     </select>
+
+                     <button type="submit" class="filled-button btn-block">Search</button>
+                </form>
+             </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-6"> 
+                <div class="product-item">
+                  <a href="car-details.html"><img src="/static/assets/images/product-1-370x270.jpg" alt=""></a>
+                  <div class="down-content">
+                    <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                    <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                    <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                    <small>
+                      <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="product-item">
+                  <a href="car-details.html"><img src="/static/assets/images/product-2-370x270.jpg" alt=""></a>
+                  <div class="down-content">
+                    <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                    <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                    <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                    <small>
+                      <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="product-item">
+                  <a href="car-details.html"><img src="/static/assets/images/product-3-370x270.jpg" alt=""></a>
+                  <div class="down-content">
+                    <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                    <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                    <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                    <small>
+                      <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="product-item">
+                  <a href="car-details.html"><img src="/static/assets/images/product-4-370x270.jpg" alt=""></a>
+                  <div class="down-content">
+                    <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                    <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                    <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                    <small>
+                      <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="product-item">
+                  <a href="car-details.html"><img src="/static/assets/images/product-5-370x270.jpg" alt=""></a>
+                  <div class="down-content">
+                    <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                    <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                    <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                    <small>
+                      <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                    </small>
+                  </div>
+                </div>
+              </div>
+
+              
+              {% for car in cars %}                
+              <div class="col-md-6">
+                <div class="product-item">
+                  <a href="{% url 'main:car_detail' car.id %}"><img src="{{car.image_main.url}}" alt=" image not founf "></a>
+                  <div class="down-content">
+                    <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                    <h6><small><del> ${{car.old_price}}</del></small> ${{car.price}}</h6>
+
+                    <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                    <small>
+                      <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                    </small>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+              <div class="col-md-12">
+                <ul class="pages">
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Book Now</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="contact-form">
+              <form action="#" id="contact">
+                  <div class="row">
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Pick-up location" required="">
+                          </fieldset>
+                       </div>
+
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Return location" required="">
+                          </fieldset>
+                       </div>
+                  </div>
+
+                  <div class="row">
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Pick-up date/time" required="">
+                          </fieldset>
+                       </div>
+
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Return date/time" required="">
+                          </fieldset>
+                       </div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Enter full name" required="">
+
+                  <div class="row">
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Enter email address" required="">
+                          </fieldset>
+                       </div>
+
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Enter phone" required="">
+                          </fieldset>
+                       </div>
+                  </div>
+              </form>
+           </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+{% endblock %}

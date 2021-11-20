@@ -1,0 +1,367 @@
+
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- Carouserl -->
+        <div class="w-100">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner " style="height: 600px;">
+                <div class="carousel-item active banner-item-01">
+                </div>
+                <div class="carousel-item    banner-item-02">
+                </div>
+                <div class="carousel-item  banner-item-03">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+      </div>
+        <!-- Carouserl -->
+
+    <div class="latest-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              
+              {% if request.user.is_staff %}
+              <h2> Welcome SuperUser {{request.user.username.upper}} <span class="ml-5">{{request.user.id}}</span> </h2>
+              {% else %}
+              <h2> Welcome {{request.user.username.upper}} {{request.user.id}} </h2>
+              {% endif %}                
+              <h2>Featured Cars</h2>
+              <a href="cars.html">view more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+              <a href="car-details.html"><img src="/static/assets/images/product-1-370x270.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+              <a href="car-details.html"><img src="/static/assets/images/product-2-370x270.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+              <a href="car-details.html"><img src="/static/assets/images/product-3-370x270.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+              <a href="car-details.html"><img src="/static/assets/images/product-4-370x270.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+              <a href="car-details.html"><img src="/static/assets/images/product-5-370x270.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+              <a href="car-details.html"><img src="/static/assets/images/product-6-370x270.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="car-details.html"><h4>Lorem ipsum dolor sit amet, consectetur</h4></a>
+
+                <h6><small><del> $11199.00</del></small> $11179.00</h6>
+
+                <p>190 hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; Used vehicle</p>
+
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> 130 000km</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                </small>
+              </div>
+            </div>
+          </div>
+            
+          {% for car in cars %}
+          <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+              <a href=" {% url 'main:car_detail' car.id %} ">  <img src=" {{car.image_main.url}} " alt=""></a>
+              <div class="down-content">
+                <a href=" {% url 'main:car_detail' car.id %} "><h4 class="text-danger font-weight-bold  " style="font-size: 20px;"> {{car.model}} </h4></a>
+
+                <h6><small><del> ${{car.old_price}} </del></small> ${{car.price}}</h6>
+
+                <p class="text-dark font-weight-bold" > {{car.power}} hp &nbsp;/&nbsp; Petrol &nbsp;/&nbsp; 2008 &nbsp;/&nbsp; {{car.status.upper}}</p>
+                <small>
+                  <strong title="Author"><i class="fa fa-dashboard"></i> Speed {{car.max_tezlik}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Author"><i class="fa fa-cube"></i> 1800cc</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong title="Views"><i class="fa fa-cog"></i> Manual</strong>
+                </small>
+              </div>
+              {% if request.user.is_staff %}
+                <div class="btn-grops" style="display: flex;justify-content: center;">
+                    <a class=" mr-2 btn btn-group btn-outline-primary" href="{% url 'main:car_update' car.id %}"> Update </a>
+                    <a class=" mr-2 btn btn-group btn-outline-danger" href="{% url 'main:car_delete' car.id %}"> Delete </a>
+                </div>
+              {% endif %} 
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="best-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>About Us</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Explicabo, esse consequatur alias repellat in excepturi inventore ad <a href="#">asperiores</a> tempora ipsa. Accusantium tenetur voluptate labore aperiam molestiae rerum excepturi minus in pariatur praesentium, corporis, aliquid dicta.</p>
+              <ul class="featured-list">
+                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li><a href="#">Consectetur an adipisicing elit</a></li>
+                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
+                <li><a href="#">Corporis, omnis doloremque</a></li>
+              </ul>
+              <a href="about-us.html" class="filled-button">Read More</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="/static/assets/images/about-1-570x350.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services" style="background-image: url(/static/assets/images/other-image-fullscren-1-1920x900.jpg);" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Latest blog posts</h2>
+
+              <a href="blog.html">read more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="/static/assets/images/blog-1-370x270.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</a></h4>
+
+                <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="/static/assets/images/blog-2-370x270.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h4>
+
+                <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <a href="#" class="services-item-image"><img src="/static/assets/images/blog-3-370x270.jpg" class="img-fluid" alt=""></a>
+
+              <div class="down-content">
+                <h4><a href="#">Aperiam modi voluptatum fuga officiis cumque</a></h4>
+
+                <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="happy-clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Happy Clients</h2>
+
+              <a href="testimonials.html">read more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-clients owl-carousel text-center">
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>John Doe</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Jane Smith</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Antony Davis</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>John Doe</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Jane Smith</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Antony Davis</h4>
+                  <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-right">
+                  <a href="contact.html" class="filled-button">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
