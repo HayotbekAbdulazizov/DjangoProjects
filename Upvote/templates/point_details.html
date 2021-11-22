@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> {{ point.title }} </h1>
+
+
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% if request.user.is_authenticated %}
+        {{ form }}
+        {% else %}
+        <a href="{% url 'account_login' %}"> Login </a>  <span> in order to Comment </span>
+        {% endif %}
+        <button type="submit"> sMB </button>
+    </form>
+
+        <h4> {{ point.comments.all|length }} </h4>
+    {% for comment in point.comments.all %}
+        <p> {{comment.message}} </p>
+        <p> {{comment.name}} </p>
+        
+    {% endfor %}
+        
+</body>
+</html>

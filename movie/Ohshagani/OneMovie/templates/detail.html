@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title> Movie | {{object.title}} </title>
+{% endblock title %}
+    
+
+{% block content %}
+        
+
+<style>
+    .hr-line{
+        width: 70%;
+        height: 1px;
+        background-color: #fff;
+        margin-left: 10px;
+    }
+</style>
+
+
+
+
+<div class="container " >
+    <div class="section">
+    <div class="row">
+        <div class="col s12 m3 l3" style="background-color: #3a3539;">
+            <div class="card-panel " style="background-color: #3a3539; border: none;box-shadow: none;padding-top: 1px;">
+                <h5 class="white-text "> Rubrics </h5>
+                <div class="collection">
+                    <a href="{% url 'main:home'  %}" class="collection-item white-text" style="background-color: #3a3539; border: none;"><b> ALL </b></a>
+                    {% for rubric in Rubrics %}
+                    <a href="{% url 'main:category_sort' rubric.id %}" class="collection-item white-text" style="background-color: #3a3539; border: none;padding-right: 0px;"><b>{{ rubric.name.upper }}</b></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m9">
+            <div class="row" style="display: flex; justify-content: space-between;">
+                <div class="headers" style="width: 90%;">
+                <h5 class="white-text" style="margin-left: 10px;">  {{ object.title.capitalize }} </h5>
+                <div class="hr-line" style="width: 95%;"></div>
+            </div>
+            <form action=""> 
+                {% csrf_token %}
+                <input type="text" placeholder="Search ..." class="white-text" style="margin-top: 7px;margin-left:50px;width: 160px;">    
+            </form>
+        </div>
+
+            <div class="row" >
+                {% for movie in object_list %}
+                <a href="{% url 'main:movie_detail' movie.id %}" style="text-decoration: none;">
+                    <div class="col s12 m4"> 
+                        <div class="card" style="background: none; box-shadow: none;">
+                            <div class="card-image">
+                              <img src="{{movie.poster.url}}">
+                            </div>
+                            <h5 style="font-size: 15px; " class="white-text"> <center> {{ movie.title }} </center> </h5>
+                          </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>   
+    </div>
+</div>
+</div>
+
+{% endblock content %}
+    
