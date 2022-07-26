@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Плеер Stories</title>
+		
+		<link href="/static/index.css" rel="stylesheet">
+		<link href="/static/player/lib.css" rel="stylesheet">
+		
+		<!-- <script src="player/lib.js" defer></script> -->
+		<!-- <script src="index.js" defer></script> -->
+
+	</head>
+
+	<body>
+		<div class="my-player">
+
+		</div>
+
+
+
+
+		<script src="/static/index.js" type="module" defer></script>
+		<script src="/static/player/lib.js" type="module" defer></script>
+	</body>
+</html>
