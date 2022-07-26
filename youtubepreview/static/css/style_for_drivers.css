@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Alef:wght@700&family=Montserrat:wght@500;600&display=swap");
+
+nav {
+  background: #1e2e3d;
+  height: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+nav ul li {
+  margin-top: 25px;
+}
+nav ul li a {
+  padding: 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: 31px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+.for_drivers {
+  opacity: 1;
+}
+nav ul li a:hover {
+  opacity: 1;
+  background: transparent;
+}
+.request {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  background: #ffffff;
+  color: black;
+  font-size: 10px;
+  font-family: "Alef", sans-serif;
+  line-height: 16px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: all 1s;
+}
+.request:hover {
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+}
+.menu {
+  color: black;
+  background: white;
+  border-radius: 5px;
+  transition: all 1s;
+}
+.menu:hover {
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+}
+#dropdown1 {
+  min-width: 130px;
+}
+footer {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 60px;
+  font-family: "Alef", sans-serif;
+}
+
+footer {
+  background: #1a2836;
+  color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.f1 > li > a,
+.f1 > li,
+.f4 > li > a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 12px;
+}
+.f1 > li > a > img,
+.f1 > li > img,
+.f4 > li > a > img,
+.f4 > li > img {
+  margin-right: 10px;
+}
+.f1 > li {
+  margin-bottom: 4px;
+}
+.f2 > li > a,
+.f3 > li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: normal;
+  opacity: 0.7;
+}
+.f2 > li {
+  margin-bottom: 6px;
+}
+.box {
+  margin: 5%;
+  padding: 5%;
+  background: #1e2e3d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+}
+.box > .row {
+  margin-bottom: 40px;
+}
+.box > .row > p {
+  font-weight: 600;
+  font-size: 35px;
+}
+.box > .row > span {
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.input {
+  height: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-family: "Alef", sans-serif;
+  margin-bottom: 20px;
+}
+.send {
+  color: #fefefe;
+  font-family: "Alef", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 10px 65px;
+  background: #1a2836;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+.previuos {
+  display: inline-block;
+  font-family: "Alef", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  padding: 10px 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  color: #4e51536c;
+}

@@ -1,0 +1,78 @@
+<!-- {% load static %} -->
+<!--  -->
+<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+<!-- <head> -->
+	<!-- <meta charset="utf-8"> -->
+	<!-- <title>You Tube</title> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css' %}"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}"> -->
+<!--  -->
+<!-- </head> -->
+<!-- <body> -->
+	<!-- <div class="container"> -->
+		<!-- <form action="" method="POST"> -->
+			<!-- {% csrf_token %} -->
+			<!-- <div class="row"> -->
+				<!-- <div class="col-md-8"> -->
+					<!-- <div class="card"> -->
+						<!-- <div class="card-header"> -->
+							<!-- <input type="input" placeholder="Search..." class="form-control" name="link" style="width: 80%"> -->
+							<!-- <input type="submit" name="" class="btn btn-info" value="go"> -->
+						<!-- </div> -->
+						<!--  -->
+					<!-- </div> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		<!-- </form> -->
+		<!-- <h1> {{vid_title}}.mp4 </h1> -->
+		<!-- <video src="{{video.video.url}}" autoplay></video> -->
+		<!-- <a class="" href="{{video.video.url}}" data-target="_blank"> Download  </a> -->
+		<!-- <div class="card-body"> -->
+			<!-- <!-- <a style="width: 100%; height: auto;" href="https://img.youtube.com/vi/{{link}}/maxresdefault.jpg" target="_blank"> -->
+				<!-- <img src="https://img.youtube.com/vi/{{link}}/maxresdefault.jpg" class="responsive-img" alt=""> -->
+			<!-- </a> --> -->
+		<!-- </div> -->
+	<!-- </div> -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- https://www.youtube.com/watch?v=ZOhnPIHGxNM -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+<!--  -->
+<!--  -->
+<!-- </body> -->
+<!-- <!-- </html> -- -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+			<form action="" method="POST">
+			{% csrf_token %}
+			<div class="row">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header">
+							<input type="input" placeholder="Search..." class="form-control" name="link" style="width: 80%">
+							<input type="submit" name="" class="btn btn-info" value="go">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<a href="{{video.video.url}}"></a>
+</body>
+</html>

@@ -1,78 +1,519 @@
-<!-- {% load static %} -->
-<!--  -->
-<!-- <!DOCTYPE html> -->
-<!-- <html> -->
-<!-- <head> -->
-	<!-- <meta charset="utf-8"> -->
-	<!-- <title>You Tube</title> -->
-	<!-- <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css' %}"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.min.css' %}"> -->
-<!--  -->
-<!-- </head> -->
-<!-- <body> -->
-	<!-- <div class="container"> -->
-		<!-- <form action="" method="POST"> -->
-			<!-- {% csrf_token %} -->
-			<!-- <div class="row"> -->
-				<!-- <div class="col-md-8"> -->
-					<!-- <div class="card"> -->
-						<!-- <div class="card-header"> -->
-							<!-- <input type="input" placeholder="Search..." class="form-control" name="link" style="width: 80%"> -->
-							<!-- <input type="submit" name="" class="btn btn-info" value="go"> -->
-						<!-- </div> -->
-						<!--  -->
-					<!-- </div> -->
-				<!-- </div> -->
-			<!-- </div> -->
-		<!-- </form> -->
-		<!-- <h1> {{vid_title}}.mp4 </h1> -->
-		<!-- <video src="{{video.video.url}}" autoplay></video> -->
-		<!-- <a class="" href="{{video.video.url}}" data-target="_blank"> Download  </a> -->
-		<!-- <div class="card-body"> -->
-			<!-- <!-- <a style="width: 100%; height: auto;" href="https://img.youtube.com/vi/{{link}}/maxresdefault.jpg" target="_blank"> -->
-				<!-- <img src="https://img.youtube.com/vi/{{link}}/maxresdefault.jpg" class="responsive-img" alt=""> -->
-			<!-- </a> --> -->
-		<!-- </div> -->
-	<!-- </div> -->
-<!--  -->
-<!--  -->
-<!--  -->
-<!-- https://www.youtube.com/watch?v=ZOhnPIHGxNM -->
-<!--  -->
-<!--  -->
-<!--  -->
-
-<!--  -->
-<!--  -->
-<!-- </body> -->
-<!-- <!-- </html> -- -->
-
-
-
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-			<form action="" method="POST">
-			{% csrf_token %}
-			<div class="row">
-				<div class="col-md-8">
-					<div class="card">
-						<div class="card-header">
-							<input type="input" placeholder="Search..." class="form-control" name="link" style="width: 80%">
-							<input type="submit" name="" class="btn btn-info" value="go">
-						</div>
-					</div>
-				</div>
-			</div>
-		</form>
 
-		<a href="{{video.video.url}}"></a>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css" media="screen,projection" />
+    <link rel="shortcut icon" href="/static/images/logo_title.ico" type="image/x-icon" class="l">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/css/style_index.css">
+    <title>FASTPLUS CARGO</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn hide-on-large-only menu' href='#' data-target='dropdown1'>
+                <i class="fas fa-bars" style="margin-top: -13px;"></i>
+            </a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content menu_list'>
+                <li><a href="index.html" class="black-text">Home</a></li>
+                <li><a href="for_drivers.html" class="black-text">For drivers</a></li>
+                <li><a href="#about_us" class="black-text">About Us</a></li>
+                <li><a href="services.html" class="black-text">Services</a></li>
+                <li><a href="#reviews" class="black-text">Reviews</a></li>
+                <li><a href="#contact" class="black-text">Contacts</a></li>
+                <li><a href="#request" class="black-text">REQUEST A QUOTE</a></li>
+            </ul>
+            <a href="index.html" class="brand-logo"><img src="/static/images/logo.png" alt="" class="responsive-img" /></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html" class="home">Home</a></li>
+                <li><a href="for_drivers.html">For drivers</a></li>
+                <li><a href="#about_us">About Us</a></li>
+                <li><a href="services.html#">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#request" class="waves-effect btn request">REQUEST A QUOTE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="first_section" style="background: linear-gradient(
+        84.71deg,
+        #1e2e3d 1.18%,
+        rgba(30, 46, 61, 0.2) 97.01%
+      ), url('/static/images/first_section_bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;  
+      opacity: 0.9;">
+
+        <div class="row" style="height: 500px;">           
+            <div class="col s12 m9 l6">
+                <span class="text_first">
+                    We are logistics its all about delivery parcels on time anywhere
+                </span>
+                <br>
+                <span class="text_second">
+                    Non feugiat congue vulputate sit viverra enim lacinia ridiculus sit. Egestas in vel elementum
+                    fermentum
+                    ornare eu semper.
+                </span>
+                <br>
+                <button class="first_button">
+                    APPLY TO DRIVE <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="second_section">
+        <div class="row">
+            <p class="col s6 push-s3 center-align">We have programs for the ofner opertor and lease drivers</p>
+        </div>
+        <div class="row">
+            <div class="col s12 m3 card-panel box_2_1" style="margin-left: 10%;margin-right:5%;">
+                <div class="row">
+                    <div class="col s8"><br>
+                        <span class="text_2_1_1">We hire experienced truckers</span><br><br><br><br>
+                        <span class="text_2_1_2">our team includes owner-operators and company drivers.</span><br><br>
+                    </div>
+                    <div class="col s4"> <br><br>
+                        <!-- <img src="images/people.png" alt="" class="responsive-img center-align" -->
+                        <img src="/static/images/people.png" alt="" class="responsive-img center-align"
+                            style="height: 150px;" />
+                    </div><br><br><br>
+                </div>
+
+            </div>
+
+            <div class="col s12 m3 card-panel box_2_1" style="margin-right: 5%;">
+                <div class="row">
+                    <div class="col s8"><br>
+                        <span class="text_2_1_1">Drivers love working
+                            with us with our bonuses</span><br><br><br>
+                        <span class="text_2_1_2">Drivers love working with us since we offer stable gross and monthly
+                            bonuses.</span><br><br>
+                    </div>
+                    <div class="col s4"> <br><br>
+                        <img src="/static/images/boxs.png" alt="" class="responsive-img center-align" style="height: 100px;" />
+                    </div><br><br><br>
+                </div>
+
+            </div>
+            <div class="col s12 m3 card-panel box_2_1">
+                <div class="row">
+                    <div class="col s8"><br>
+                        <span class="text_2_1_1">There are new trucks for our drivers and for rent</span><br><br><br>
+                        <span class="text_2_1_2">Our fleet includes new 2021 trucks for company drivers and for
+                            lease.</span><br><br>
+                    </div>
+                    <div class="col s4"> <br><br>
+                        <img src="/static/images/worker.png" alt="" class="responsive-img center-align"
+                            style="height: 150px;" />
+                    </div><br><br><br>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div id="about_us" class="third_section">
+        <div class="row">
+            <div class="col s12 m4"><img src="/static/images/truck_1.png" alt="" class="responsive-img"
+                    style="height: 200px;margin-top:30px;" /></div>
+            <div class="col s12 m8"><br>
+                <span class="text_3_1">Fastplus Cargo</span><br><br>
+                <span>Fastplus Cargo is the premier logistics trucking company in Orlando, FL. We’re dedicated to
+                    providing professional assistance in the process of freight transportation, as well as reliable
+                    support to both our clients and our drivers. If you want to work with real professionals and get the
+                    best service with the highest gross, we’re the ones to call.</span>
+                <br><br>
+                <span>Reach us today to discuss how we can provide you with support,
+                    stability and reliability. Our professional dispatchers are here for you 24/7.</span><br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth_section">
+        <div class="row">
+
+            <div class="col s12 m8"><br>
+                <span class="text_4_1">Dependable Trucking and Logistic Services</span><br><br>
+                <span>
+                    Our efficient team is standing by to make logistics simple, including providing transparency when it
+                    comes to the chain of custody. In other words, we provide you with unmatched peace of mind as a
+                    crucial part of your business’ supply chain. Leave all the detail work of logistics and
+                    transportation to the experts, so you have more time to grow your company. We’re your partner for
+                    inbound and outbound operational success.
+            </div>
+            <div class="col s12 m4"><img src="/static/images/truck_2.png" alt="" class="responsive-img"
+                    style="height: 200px;margin-top:30px;" /></div>
+        </div>
+    </div>
+
+    <div class="fiveth_section">
+        <div class="row">
+            <div class="col s12 m5"><img src="/static/images/truck_3.png" alt="" class="responsive-img"
+                    style="height: 200px;margin-top:30px;" />
+            </div>
+            <div class="col s12 m7"><br>
+                <span class="text_4_1">Our Team of Committed Truck Drivers</span><br><br>
+                <span>
+                    As a leading trucking company in Orlando, FL, we’re always looking for qualified drivers to join our
+                    team. We offer excellent pay and benefits, and we always strive to keep your work-life balance in
+                    mind. Our upgraded equipment makes your job easier, and we offer dedicated route options and weekly
+                    home time in select areas
+            </div>
+
+        </div>
+    </div>
+    <div id="reviews" class="sixth_section">
+
+        <div class="carousel">
+            <a class="carousel-item" href="#">
+
+                <div class="card col s12" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Nina Ameta</span>
+                        <p>"Great people, and very professional looking forward to working with them more in the
+                            future."
+                    </div>
+                </div>
+
+            </a>
+            <a class="carousel-item" href="#">
+
+                <div class="card" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Alex Usweron</span>
+                        <p>"After working with this company, you will not want to work with any other .."
+                            <br><br>
+                    </div>
+                </div>
+
+            </a>
+            <a class="carousel-item" href="#">
+
+                <div class="card" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Benjamin Realex</span>
+                        <p>"Great people, and very professional looking forward to working with them more in the
+                            future."
+                    </div>
+                </div>
+
+            </a>
+            <a class="carousel-item" href="#">
+
+                <div class="card" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Nina Ameta</span>
+                        <p>"Great people, and very professional looking forward to working with them more in the
+                            future."
+                    </div>
+                </div>
+
+            </a>
+            <a class="carousel-item" href="#">
+
+                <div class="card col s12" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Nina Ameta</span>
+                        <p>"Great people, and very professional looking forward to working with them more in the
+                            future."
+                    </div>
+                </div>
+
+            </a>
+            <a class="carousel-item" href="#">
+
+                <div class="card" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Alex Usweron</span>
+                        <p>"After working with this company, you will not want to work with any other .."
+                            <br><br>
+                    </div>
+                </div>
+
+            </a>
+            <a class="carousel-item" href="#">
+
+                <div class="card" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Benjamin Realex</span>
+                        <p>"Great people, and very professional looking forward to working with them more in the
+                            future."
+                    </div>
+                </div>
+
+            </a>
+            <a class="carousel-item" href="#">
+
+                <div class="card" style="background: #1E2E3D;border-radius:10px;width:120%">
+                    <div class="card-content white-text">
+                        <span class="card-title"><img src="/static/images/person-icon.png" alt="" class="responsive-img"
+                                style="height:50px;border-radius: 50%;" />
+                            <br>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <br>Nina Ameta</span>
+                        <p>"Great people, and very professional looking forward to working with them more in the
+                            future."
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+    </div>
+
+    <div id="request" class="seventh_section">
+
+        <div class="row">
+            <div class="col s12 m9">
+                <div class="row">
+                    <p style="font-size:30px;margin:0 0 0 15px;">REQUEST A QUOTE</p>
+                    <div class="col s12 m6 l4">
+                        <div class="input">
+                            <input type="text" style="border: none;padding-left: 50px;" placeholder='Name'>
+                            <img src="/static/images/user.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="input">
+                            <input type="text" style="border: none;padding-left: 50px;" placeholder='Company Name'>
+                            <img src="/static/images/company_name.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="input">
+                            <input type="text" style="border: none;padding-left: 50px;" placeholder="MC#">
+                            <img src="/static/images/flag.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="input">
+                            <input type="text" style="border: none;padding-left: 50px;" placeholder='E-mail'>
+                            <img src="/static/images/e-mail.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="input">
+                            <input type="text" style="border: none;padding-left: 50px;" placeholder='+1 (__) - __ - __'>
+                            <img src="/static/images/phone.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m5">
+                        <div class="input">
+                            <textarea name="" id="" cols="40" rows="50" style="border: none;padding-left: 50px;
+                                background:linear-gradient(90deg, #283745 0%, #152331 100%);
+                                border-radius:20px;height:100px;padding-top:8px; color: #ffffff;"
+                                placeholder="Notes"></textarea>
+
+                            <img src="/static/images/notes.png" alt="" style=" top: -103px;">
+                        </div>
+                    </div>
+                    <div class="col s12 m7">
+                        <div class="row">
+                            <div class="col s12 m6 l3" style="padding: 0;">
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="filled-in" />
+                                        <span style="color: #000;
+                                        text-decoration: underline;font-size:12px;padding-left:20px;">
+                                            Dry van
+                                        </span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="col s12 m6 l2" style="padding: 0;">
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="filled-in" />
+                                        <span style="color: #000;
+                                        text-decoration: underline;font-size:12px;padding-left:20px;">
+                                            Reefer
+                                        </span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="col s12 m6 l3" style="padding: 0;">
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="filled-in" />
+                                        <span style="color: #000;
+                                        text-decoration: underline;font-size:12px;padding-left:20px;">
+                                            Step-deck
+                                        </span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="col s12 m6 l4" style="padding: 0;">
+                                <form action="#">
+                                    <label>
+                                        <input type="checkbox" class="filled-in" />
+                                        <span style="color: #000;
+                                        text-decoration: underline;font-size:12px;padding-left:20px;">
+                                            Flat bed
+                                        </span>
+                                    </label>
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <center>
+                                    <input type="submit" value="Submit" class="submit">
+                                </center>
+                            </div>
+                            <div class="col s12 m6">
+                                <center style="padding-top:10px;">
+                                    <form action="#">
+                                        <label>
+                                            <input type="checkbox" class="filled-in" />
+                                            <span style="color: #000;
+                                        text-decoration: underline;
+                                        font-size:15px;
+                                        padding-left:20px;">
+                                                Need driver assistance
+                                            </span>
+                                        </label>
+                                    </form>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3"><img src="images/map.png" alt="" class="responsive-img" /></div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="row" style="margin: 0;">
+            <div class="col s12 m3">
+                <ul class="f1">
+                    <li style="font-size: 20px;">Contact Us</li>
+                    <li><a href="#"><img src="/static/images/location.png" alt="" class="responsive-img" />Location</a></li>
+                    <li><a href="#"><img src="/static/images/support_center.png" alt="" class="responsive-img" />Support
+                            center</a></li>
+                    <li><img src="/static/images/clock.png" alt="" class="responsive-img" />Monday - Friday (9:30 - 18:00)</li>
+                    <li><a href="#"><img src="/static/images/gmail.png" alt="" class="responsive-img" />@Gmail</a></li>
+                </ul>
+            </div>
+            <div class="col s12 m2">
+                <ul class="f2">
+                    <li><a href="index.html" style="font-weight: bold;opacity:1;font-size:20px;">Home</a></li>
+                    <li><a href="index.html">The Company</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#about_us">About Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="col s12 m3">
+                <ul class="f3">
+                    <li style="font-weight: bold;opacity:1;font-size:20px;">Business Hours</li>
+                    <li>Monday: 8 AM - 6 PM</li>
+                    <li>Tuesday: 8 AM - 6 PM</li>
+                    <li>Wednesday: 8 AM - 6 PM</li>
+                    <li>Thursday: 8 AM - 6 PM</li>
+                    <li>Friday: 8 AM - 6 PM</li>
+                    <li>Saturday: 8 AM - 6 PM</li>
+                    <li>Sunday: 8 AM - 6 PM</li>
+                </ul>
+            </div>
+            <div class="col s12 m2 offset-m2">
+                <ul class='f4'>
+                    <li><a href="index.html"><img src="/static/images/logo.png" alt="" class="responsive-img" /></a></li>
+                    <li><a href="#"><img src="/static/images/facebook.png" alt="" class="responsive-img" />@Username</a></li>
+                    <li><a href="#"><img src="/static/images/instagram.png" alt="" class="responsive-img" />@Username</a></li>
+                    <li><a href="#"><img src="/static/images/telegram.png" alt="" class="responsive-img" />@Username</a></li>
+                    <li><img src="/static/images/c.png" alt="" class="responsive-img" />2021</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+    <script>  M.AutoInit();</script>
+
 </body>
+
 </html>
